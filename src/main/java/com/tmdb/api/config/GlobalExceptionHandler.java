@@ -15,6 +15,12 @@ public class GlobalExceptionHandler {
     return ResponseEntity.status(404).body(ex.getMessage());
   }
 
+  @ExceptionHandler(FeignException.NotFound.class)
+  public ResponseEntity<String> handleFeignNotFound(
+      FeignException.NotFound ex) {
+    return ResponseEntity.status(404).body("Movie not found.");
+  }
+
   @ExceptionHandler(FeignException.Unauthorized.class)
   public ResponseEntity<String> handleFeignUnauthorized(
       FeignException.Unauthorized ex) {
