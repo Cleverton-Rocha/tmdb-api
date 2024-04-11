@@ -1,4 +1,4 @@
-package com.tmdb.api.model;
+package com.tmdb.api.model.tmdb;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import java.util.List;
