@@ -2,8 +2,8 @@ package com.tmdb.api.service;
 
 import com.tmdb.api.exception.NotFoundException;
 import com.tmdb.api.feign.TmdbClient;
-import com.tmdb.api.model.MovieDetailed;
-import com.tmdb.api.model.MoviePageResponse;
+import com.tmdb.api.model.tmdb.MovieDetailed;
+import com.tmdb.api.model.tmdb.MoviePageResponse;
 import com.tmdb.api.util.GenreMapping;
 import org.springframework.stereotype.Service;
 

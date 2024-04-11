@@ -1,7 +1,7 @@
 package com.tmdb.api.feign;
 
-import com.tmdb.api.model.MovieDetailed;
-import com.tmdb.api.model.MoviePageResponse;
+import com.tmdb.api.model.tmdb.MovieDetailed;
+import com.tmdb.api.model.tmdb.MoviePageResponse;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;

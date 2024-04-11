@@ -1,7 +1,7 @@
 package com.tmdb.api.controller;
 
-import com.tmdb.api.model.MovieDetailed;
-import com.tmdb.api.model.MoviePageResponse;
+import com.tmdb.api.model.tmdb.MovieDetailed;
+import com.tmdb.api.model.tmdb.MoviePageResponse;
 import com.tmdb.api.service.TmdbService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
