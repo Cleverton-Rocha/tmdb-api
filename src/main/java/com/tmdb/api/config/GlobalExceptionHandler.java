@@ -1,7 +1,9 @@
 package com.tmdb.api.config;
 
 import com.tmdb.api.exception.NotFoundException;
+import java.util.Objects;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 
@@ -25,5 +27,11 @@ public class GlobalExceptionHandler {
   public ResponseEntity<String> handleFeignUnauthorized(
       FeignException.Unauthorized ex) {
     return ResponseEntity.status(401).body("Unauthorized");
+  }
+
+  @ExceptionHandler(MethodArgumentNotValidException.class)
+  public ResponseEntity<String> handleMethodArgumentNotValid(MethodArgumentNotValidException ex) {
+    return ResponseEntity.status(400)
+        .body(Objects.requireNonNull(ex.getBindingResult().getFieldError()).getDefaultMessage());
   }
 }
