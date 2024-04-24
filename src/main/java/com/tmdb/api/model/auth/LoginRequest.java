@@ -6,9 +6,8 @@ import jakarta.validation.constraints.Size;
 
 public record LoginRequest(
     @NotNull
-    @Size(min = 11, max = 11, message = "Username must have 11 characters.")
-    @Pattern(regexp = "^[0-9]\\d*$", message = "Username must have only numbers, without special "
-        + "characters or letters.")
+    @Size(min = 3, max = 55, message = "Username must have at least 3 characters.")
+    @Pattern(regexp = "^[a-zA-Z0-9]*$", message = "Username must contain only letters and numbers.")
     String username,
 
     @NotNull(message = "Password cannot be null")
